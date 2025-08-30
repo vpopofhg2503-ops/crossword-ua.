@@ -1,169 +1,312 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Кросворди з антикорупції</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Кросворди з перетинами — антикорупційні терміни</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.4; }
-    h1 { color: #2c3e50; }
-    details { margin: 5px 0; }
-    summary { font-weight: bold; cursor: pointer; }
-    .answer { margin: 3px 0 10px 20px; color: #1a5276; }
+    :root{
+      --bg:#0b0f14; --card:#0f1620; --ink:#e6edf3; --muted:#a9b4c0; --acc:#5ee1ff; --accent2:#9bffb1;
+      --grid:#1e2a38; --cell:#0c131c; --cell-fill:#122033; --hl:#23374e;
+    }
+    html,body{height:100%;}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif; background:var(--bg); color:var(--ink);} 
+    .wrap{max-width:1100px; margin:24px auto; padding:0 16px 40px;}
+    h1{font-size:28px; margin:8px 0 16px; letter-spacing:.2px}
+    h2{font-size:22px; margin:28px 0 8px}
+    .card{background:var(--card); border:1px solid #1a2533; border-radius:16px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .grid-holder{display:grid; grid-template-columns: 1fr; gap:20px;}
+    @media(min-width:900px){ .grid-holder{grid-template-columns: 560px 1fr;} }
+
+    /* Crossword grid */
+    .cw{width:100%; height:auto; display:block;}
+    .board{border-collapse:collapse; table-layout:fixed; width:100%; background:var(--cell);}
+    .board td{position:relative; border:1px solid var(--grid); aspect-ratio:1/1; text-align:center; vertical-align:middle;}
+    .board .black{background:#090e15;}
+    .board .cell{background:var(--cell-fill);}
+    .num{position:absolute; top:2px; left:3px; font-size:10px; color:var(--muted);}
+    .letter{font-weight:700; font-size:18px; letter-spacing:.5px;}
+    .cell.revealed{background:var(--hl);}    
+
+    /* Clues */
+    details{background:#0c141e; border:1px solid #1a2736; border-radius:10px; padding:10px 12px; margin:8px 0}
+    details[open]{outline:1px solid #203044}
+    summary{cursor:pointer; list-style:none;}
+    summary::-webkit-details-marker{display:none}
+    .ans{margin:8px 0 0 0; color:var(--accent2);}
+    .clue-title{color:var(--muted); font-size:13px; text-transform:uppercase; letter-spacing:.1em; margin:10px 0 2px}
+    .legend{font-size:12px; color:var(--muted); margin-top:6px}
+    .pill{display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid #2a3a4d; margin:0 6px 6px 0; font-size:12px; color:#cfe8ff;}
+
+    .bar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:8px 0 18px}
+    .btn{background:transparent; color:var(--ink); border:1px solid #284158; padding:8px 12px; border-radius:10px; cursor:pointer}
+    .btn:hover{background:#102033}
+    .muted{color:var(--muted)}
+    a{color:var(--acc)}
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <h1>Два кросворди з перетинами — антикорупційні терміни</h1>
+    <p class="muted">Клік по підказці відкриває відповідь і підсвічує слово у сітці. Пробіли/апострофи в словах пропущено для зручного розміщення.</p>
 
-<h1>Кросворд 1</h1>
-<h2>По горизонталі</h2>
-<details>
-  <summary>1. Використання службових повноважень чи пов’язаних з ними можливостей з метою одержання неправомірної вигоди</summary>
-  <p class="answer">Відповідь: <b>КОРУПЦІЯ</b></p>
-</details>
-<details>
-  <summary>2. Грошові кошти або майно, переваги, які надаються чи одержуються безоплатно або за ціною нижчою від ринкової</summary>
-  <p class="answer">Відповідь: <b>ПОДАРУНОК</b></p>
-</details>
-<details>
-  <summary>3. Висловлення наміру надати неправомірну вигоду з повідомленням про час, місце, спосіб її надання</summary>
-  <p class="answer">Відповідь: <b>ОБІЦЯНКА</b></p>
-</details>
-<details>
-  <summary>4. Висловлення працівнику підприємства або службовій особі наміру про надання неправомірної вигоди</summary>
-  <p class="answer">Відповідь: <b>ПРОПОЗИЦІЯ</b></p>
-</details>
-<details>
-  <summary>5. Будь-який майновий чи немайновий інтерес особи, викликаний позаслужбовими відносинами (членство в організаціях, сімейні зв’язки тощо)</summary>
-  <p class="answer">Відповідь: <b>ПРИВАТНИЙ ІНТЕРЕС</b></p>
-</details>
-<details>
-  <summary>6. Особа, яка згідно із законом займає державну або комунальну посаду (термін пов’язаний зі злочинами службових осіб)</summary>
-  <p class="answer">Відповідь: <b>СЛУЖБОВА ОСОБА</b></p>
-</details>
-<details>
-  <summary>7. Особи, що згідно із Законом подають електронну декларацію про доходи (підпадають під дію Закону «Про запобігання корупції»)</summary>
-  <p class="answer">Відповідь: <b>СУБ’ЄКТИ ДЕКЛАРУВАННЯ</b></p>
-</details>
-<details>
-  <summary>8. Особи, які перебувають у шлюбі з суб’єктом декларування, а також їхні діти, батьки, опікуни та інші члени родини (за визначенням закону)</summary>
-  <p class="answer">Відповідь: <b>БЛИЗЬКІ ОСОБИ</b></p>
-</details>
+    <section class="card" id="cw1">
+      <div class="bar">
+        <strong>Кросворд 1</strong>
+        <button class="btn" data-action="reveal-all">Показати всі</button>
+        <button class="btn" data-action="hide-all">Сховати всі</button>
+      </div>
+      <div class="grid-holder">
+        <div>
+          <table class="board" data-board="1"></table>
+          <div class="legend"></div>
+        </div>
+        <div>
+          <div class="clues">
+            <div class="clue-title">По горизонталі</div>
+          </div>
+          <div class="clues-v"></div>
+        </div>
+      </div>
+    </section>
 
-<h2>По вертикалі</h2>
-<details>
-  <summary>1. Особи, що займають виборні посади (президент, народні депутати, мери, депутати місцевих рад тощо)</summary>
-  <p class="answer">Відповідь: <b>ВИБОРНІ ОСОБИ</b></p>
-</details>
-<details>
-  <summary>2. Вид неправомірного впливу – вимога отримати неправомірну вигоду за допомогою погроз чи примусу</summary>
-  <p class="answer">Відповідь: <b>ВИМАГАННЯ</b></p>
-</details>
-<details>
-  <summary>3. Шкода майнового характеру, яка у понад 100 разів перевищує неоподатковуваний мінімум доходів громадян</summary>
-  <p class="answer">Відповідь: <b>ІСТОТНА ШКОДА</b></p>
-</details>
-<details>
-  <summary>4. Злочини, передбачені статтями Кримінального кодексу України (191, 262, 364 та інші – всього 19 статей), що класифікуються як злочини проти корупції</summary>
-  <p class="answer">Відповідь: <b>КОРУПЦІЙНІ ЗЛОЧИНИ</b></p>
-</details>
-<details>
-  <summary>5. Діяння з ознаками корупції, вчинене службовою особою, за яке передбачена кримінальна чи інша відповідальність</summary>
-  <p class="answer">Відповідь: <b>КОРУПЦІЙНЕ ПРАВОПОРУШЕННЯ</b></p>
-</details>
-<details>
-  <summary>6. Особи, яким надано спеціальний статус для розслідування та запобігання корупції – органи прокуратури, МВС, НАБУ, Нацагентство з питань запобігання корупції</summary>
-  <p class="answer">Відповідь: <b>СПЕЦІАЛЬНО УПОВНОВАЖЕНІ СУБ’ЄКТИ У ПРОТИДІЇ КОРУПЦІЇ</b></p>
-</details>
-<details>
-  <summary>7. Наслідки злочину, які у 250 і більше разів перевищують неоподатковуваний мінімум доходів громадян (значною мірою майнові)</summary>
-  <p class="answer">Відповідь: <b>ТЯЖКІ НАСЛІДКИ</b></p>
-</details>
-<details>
-  <summary>8. Судова установа із спеціальним статусом, створена для розгляду корупційних злочинів (Вищий …)</summary>
-  <p class="answer">Відповідь: <b>АНТИКОРУПЦІЙНИЙ СУД</b></p>
-</details>
-<details>
-  <summary>10. Центральний орган виконавчої влади України зі спеціальним статусом, призначений на боротьбу з корупцією (абревіатура)</summary>
-  <p class="answer">Відповідь: <b>НАБУ</b></p>
-</details>
-<details>
-  <summary>12. Центральний орган виконавчої влади України зі спеціальним статусом для запобігання корупції (абревіатура)</summary>
-  <p class="answer">Відповідь: <b>НАЗК</b></p>
-</details>
-<details>
-  <summary>15. Структурний підрозділ Офісу Генпрокурора, який процесуально курує справи НАБУ (абревіатура)</summary>
-  <p class="answer">Відповідь: <b>САП</b></p>
-</details>
-<details>
-  <summary>16. Офіційне подання інформації про доходи та майно посадової особи (назва процедури)</summary>
-  <p class="answer">Відповідь: <b>ДЕКЛАРАЦІЯ</b></p>
-</details>
-<details>
-  <summary>17. Особа, що вперше чи повторно вчиняє корупційний злочин, визнається … (за законодавством)</summary>
-  <p class="answer">Відповідь: <b>ПОВТОРНИМ</b></p>
-</details>
-<details>
-  <summary>18. Кодекс, який регулює порядок кримінального провадження в Україні</summary>
-  <p class="answer">Відповідь: <b>КПКУ УКРАЇНИ</b></p>
-</details>
-<details>
-  <summary>19. Кодекс адміністративних правопорушень України (абревіатура повністю)</summary>
-  <p class="answer">Відповідь: <b>КУПАП УКРАЇНИ</b></p>
-</details>
+    <section class="card" id="cw2" style="margin-top:22px">
+      <div class="bar">
+        <strong>Кросворд 2</strong>
+        <button class="btn" data-action="reveal-all">Показати всі</button>
+        <button class="btn" data-action="hide-all">Сховати всі</button>
+      </div>
+      <div class="grid-holder">
+        <div>
+          <table class="board" data-board="2"></table>
+          <div class="legend"></div>
+        </div>
+        <div>
+          <div class="clues">
+            <div class="clue-title">По горизонталі</div>
+          </div>
+          <div class="clues-v"></div>
+        </div>
+      </div>
+    </section>
 
-<h1>Кросворд 2</h1>
-<h2>По горизонталі</h2>
-<details>
-  <summary>1. Особи, на яких поширюються обмеження щодо запобігання корупції – обирані політики (президент, депутати, мери)</summary>
-  <p class="answer">Відповідь: <b>ВИБОРНІ ОСОБИ</b></p>
-</details>
-<details>
-  <summary>2. Злочинна вимога неправомірної вигоди (частина складу корупційного злочину)</summary>
-  <p class="answer">Відповідь: <b>ВИМАГАННЯ</b></p>
-</details>
-<details>
-  <summary>3. Майнова шкода, що перевищує 100 неоподатковуваних мінімумів (згідно з ККУ)</summary>
-  <p class="answer">Відповідь: <b>ІСТОТНА ШКОДА</b></p>
-</details>
-<details>
-  <summary>4. Злочини проти основ національної безпеки: корупційна складова організованих злочинних угруповань (4-я частина 191 статті ККУ)</summary>
-  <p class="answer">Відповідь: <b>КОРУПЦІЙНІ ЗЛОЧИНИ</b></p>
-</details>
-<details>
-  <summary>5. Злочин, який не має корупційної мети, але порушує закон «Про запобігання корупції» (тип правопорушення)</summary>
-  <p class="answer">Відповідь: <b>ПРАВОПОРУШЕННЯ, ПОВ’ЯЗАНЕ КОРУПЦІЄЮ</b></p>
-</details>
-<details>
-  <summary>6. Висловлене на трибуні чи працівнику наміру надати хабар (повідомлення про корупційну пропозицію)</summary>
-  <p class="answer">Відповідь: <b>ПОВІДОМЛЕННЯ</b></p>
-</details>
-<details>
-  <summary>7. Приховане сприяння злочинному «дахуванню» корупційних дій (злочин проти правосуддя)</summary>
-  <p class="answer">Відповідь: <b>ПОКРИВАННЯ</b></p>
-</details>
-<details>
-  <summary>8. Вид юридичної відповідальності (кримінальна, адміністративна, дисциплінарна) за корупційні правопорушення</summary>
-  <p class="answer">Відповідь: <b>ВІДПОВІДАЛЬНІСТЬ</b></p>
-</details>
-<details>
-  <summary>9. Негласне запитання про майно та доходи кандидата при атестації (антикорупційний контроль)</summary>
-  <p class="answer">Відповідь: <b>ПЕРЕВІРКА</b></p>
-</details>
-<details>
-  <summary>10. Установчий документ Нацагентства з питань запобігання корупції (Закон № 1700-VII від 14.10.2014)</summary>
-  <p class="answer">Відповідь: <b>ЗАПОБІГАННЯ КОРУПЦІЇ</b></p>
-</details>
-<details>
-  <summary>11. Конфлікт між приватним інтересом та службовими повноваженнями (складає предмет врегулювання Закону)</summary>
-  <p class="answer">Відповідь: <b>КОНФЛІКТ ІНТЕРЕСІВ</b></p>
-</details>
-<details>
-  <summary>12. Забезпечення об’єктивності рішень і дій державних службовців – принцип державної служби</summary>
-  <p class="answer">Відповідь: <b>ПРОЗОРІСТЬ</b></p>
-</details>
-<details>
-  <summary>13. Професія – розслідувач корупційних злочинів в Україні (отримав статус у 2015 році)</summary>
-  <p class="answer">Відповідь: <b>ДЕТЕКТИВ</b></p>
-</details>
+    <section class="card" style="margin-top:22px">
+      <h2>Як опублікувати на GitHub Pages</h2>
+      <ol>
+        <li>У вашому репозиторії відкрийте <strong>Settings → Pages</strong>.</li>
+        <li>У <strong>Build and deployment</strong> оберіть <em>Branch</em>: <code>main</code>, <em>Folder</em>: <code>/ (root)</code>, натисніть <strong>Save</strong>.</li>
+        <li>Через 10–60 секунд з'явиться посилання на сайт у зеленому блоці. Перейдіть за ним.</li>
+        <li>Щоб оновити сайт — замініть в репозиторії файл <code>index.html</code> цим вмістом.</li>
+      </ol>
+    </section>
+  </div>
 
+<script>
+// ===== СЛОВА ТА ПІДКАЗКИ ====================================================
+// Допоміжна функція: нормалізація (видаляємо пробіли, апострофи, крапки)
+const norm = s => s.toUpperCase().replaceAll(/['’`\s\-–—\.]/g, "");
+
+const CW1 = {
+  across: [
+    [1, 'Використання службових повноважень чи пов’язаних з ними можливостей з метою одержання неправомірної вигоди', 'КОРУПЦІЯ'],
+    [2, 'Грошові кошти або майно, переваги, які надаються чи одержуються безоплатно або за ціною нижчою від ринкової', 'ПОДАРУНОК'],
+    [3, 'Висловлення наміру надати неправомірну вигоду з повідомленням про час, місце, спосіб її надання', 'ОБІЦЯНКА'],
+    [4, 'Висловлення працівнику чи службовій особі наміру про надання неправомірної вигоди', 'ПРОПОЗИЦІЯ'],
+    [5, 'Майновий чи немайновий інтерес, викликаний позаслужбовими відносинами', 'ПРИВАТНИЙІНТЕРЕС'],
+    [6, 'Особа, що займає державну або комунальну посаду', 'СЛУЖБОВАОСОБА'],
+    [7, 'Особи, що подають е-декларацію (суб’єкти закону)', 'СУБЄКТИДЕКЛАРУВАННЯ'],
+    [8, 'Особи зі складу родини суб’єкта декларування', 'БЛИЗЬКІОСОБИ'],
+  ],
+  down: [
+    [2, 'Особи, що займають виборні посади', 'ВИБОРНІОСОБИ'],
+    [4, 'Вид неправомірного впливу – вимога вигоди з погрозами', 'ВИМАГАННЯ'],
+    [5, 'Шкода, що у понад 100 разів перевищує н.м.д.г.', 'ІСТОТНАШКОДА'],
+    [8, 'Сукупність статей ККУ, що класифікуються як корупційні', 'КОРУПЦІЙНІЗЛОЧИНИ'],
+    [10, 'Діяння з ознаками корупції службовою особою', 'КОРУПЦІЙНЕПРАВОПОРУШЕННЯ'],
+    [12, 'Органи зі спецстатусом у протидії корупції', 'СПЕЦІАЛЬНОУПОВНОВАЖЕНІСУБЄКТИУПРОТИДІЇКОРОПЦІЇ'],
+    [15, 'Наслідки злочину у 250+ н.м.д.г.', 'ТЯЖКІНАСЛІДКИ'],
+    [16, 'Суд із спецстатусом для корупційних справ', 'АНТИКОРУПЦІЙНИЙСУД'],
+    [17, 'Бюро з боротьби з корупцією (абревіатура)', 'НАБУ'],
+    [18, 'Нацагентство з питань запобігання корупції (абревіатура)', 'НАЗК'],
+    [19, 'Прокурорський підрозділ, що курує НАБУ (абревіатура)', 'САП'],
+    [20, 'Офіційне подання даних про доходи та майно', 'ДЕКЛАРАЦІЯ'],
+    [21, 'Особа визнається … у разі повторного вчинення', 'ПОВТОРНИМ'],
+    [22, 'Кодекс кримінального провадження України', 'КПКУКРАЇНИ'],
+    [23, 'Кодекс про адмінправопорушення (повністю)', 'КУПАПУКРАЇНИ']
+  ]
+};
+
+const CW2 = {
+  across: [
+    [1, 'Особи, на яких поширюються антикоробмеження – обрані політики', 'ВИБОРНІОСОБИ'],
+    [2, 'Злочинна вимога неправомірної вигоди', 'ВИМАГАННЯ'],
+    [3, 'Майнова шкода понад 100 н.м.д.г.', 'ІСТОТНАШКОДА'],
+    [4, 'Корупційна складова оргзлочинів (ч.4 ст.191 ККУ)', 'КОРУПЦІЙНІЗЛОЧИНИ'],
+    [5, 'Правопорушення без корупційної мети, але всупереч закону', 'ПРАВОПОРУШЕННЯПОВЯЗАНЕКОРУПЦІЄЮ'],
+    [6, 'Повідомлення про корупційну пропозицію', 'ПОВІДОМЛЕННЯ'],
+    [7, 'Приховане сприяння «дахуванню»', 'ПОКРИВАННЯ'],
+    [8, 'Вид юридичної відповідальності', 'ВІДПОВІДАЛЬНІСТЬ'],
+    [9, 'Антикорупційний контроль під час атестації', 'ПЕРЕВІРКА'],
+    [10, 'Закон № 1700-VII — установчий документ НАЗК', 'ЗАПОБІГАННЯКОРУПЦІЇ'],
+    [11, 'Конфлікт між приватним інтересом і повноваженнями', 'КОНФЛІКТІНТЕРЕСІВ'],
+    [12, 'Принцип — забезпечення об’єктивності рішень', 'ПРОЗОРІСТЬ'],
+    [13, 'Професія розслідувача НАБУ (з 2015)', 'ДЕТЕКТИВ']
+  ],
+  down: [] // Для другого теж згенеруємо перетини автоматично між усіма словами
+};
+
+// ===== СПРОЩЕНИЙ ГЕНЕРАТОР РОЗТАШУВАННЯ =====================================
+// Ідея: перше слово кладемо по горизонталі в центр. Для кожного наступного
+// шукаємо букву, що збігається з уже розміщеними, і намагаємось поставити
+// перпендикулярно. Якщо не виходить — кладемо окремо поруч.
+
+function generateLayout(dataset){
+  const words = [...dataset.across.map(x=>({num:x[0], clue:x[1], ans:norm(x[2]), raw:x[2]})),
+                 ...dataset.down.map(x=>({num:x[0], clue:x[1], ans:norm(x[2]), raw:x[2]}))];
+  // Унікалізуємо за текстом відповіді, щоб уникнути дубляжу
+  const seen = new Set();
+  const queue = words.filter(w=>{ if(seen.has(w.ans)) return false; seen.add(w.ans); return true; });
+
+  const placed = []; // {ans, cells:[{x,y,ch}], dir:'across'|'down', num, clue, raw}
+  const grid = new Map(); // key "x,y" -> ch
+
+  const centerX=0, centerY=0;
+  if(queue.length){ placeAt(queue.shift(), centerX, centerY, 'across'); }
+
+  function key(x,y){return x+','+y}
+
+  function canPlace(word, x, y, dir){
+    for(let i=0;i<word.ans.length;i++){
+      const dx = dir==='across'? i:0; const dy = dir==='down'? i:0;
+      const k = key(x+dx,y+dy); const ch=grid.get(k);
+      if(ch && ch!==word.ans[i]) return false;
+      // Не даємо літері торкатися сусідніх по стороні, якщо це не перетин
+      if(!ch){
+        // Перевіряємо бічних сусідів
+        const left = dir==='across'? key(x+dx,y+dy-1): key(x+dx-1,y+dy);
+        const right= dir==='across'? key(x+dx,y+dy+1): key(x+dx+1,y+dy);
+        if(grid.has(left)||grid.has(right)) return false;
+      }
+    }
+    // Кінцеві осередки не повинні стикатися наступними по напрямку
+    const before = key(x+(dir==='across'?-1:0), y+(dir==='down'?-1:0));
+    const after  = key(x+(dir==='across'?word.ans.length:0), y+(dir==='down'?word.ans.length:0));
+    if(grid.has(before) || grid.has(after)) return false;
+    return true;
+  }
+
+  function placeAt(word,x,y,dir){
+    const cells=[]; for(let i=0;i<word.ans.length;i++){
+      const dx=dir==='across'? i:0; const dy=dir==='down'? i:0; const k=key(x+dx,y+dy);
+      grid.set(k, word.ans[i]); cells.push({x:x+dx,y:y+dy,ch:word.ans[i]});
+    }
+    placed.push({dir,num:word.num,clue:word.clue,ans:word.ans,raw:word.raw,cells});
+  }
+
+  for(const w of queue){
+    let done=false;
+    // пробуємо знайти перетин із будь-яким розміщеним словом
+    for(const p of placed){ if(done) break;
+      for(let i=0;i<p.ans.length;i++){
+        const ch = p.ans[i];
+        for(let j=0;j<w.ans.length;j++) if(w.ans[j]===ch){
+          // координати перетину
+          const crossX = p.cells[i].x; const crossY = p.cells[i].y;
+          const dir = (p.dir==='across')?'down':'across';
+          const startX = dir==='across'? crossX - j : crossX;
+          const startY = dir==='down' ? crossY - j : crossY;
+          if(canPlace(w,startX,startY,dir)){
+            placeAt(w,startX,startY,dir); done=true; break;
+          }
+        }
+      }
+    }
+    if(!done){ // не вдалося — покладемо правіше/нижче
+      // шукаємо вільне місце поруч
+      let offset=3;
+      while(!done && offset<200){
+        if(canPlace(w, centerX+offset, centerY+offset, 'across')){ placeAt(w,centerX+offset,centerY+offset,'across'); done=true; break; }
+        if(canPlace(w, centerX+offset, centerY+offset, 'down')){ placeAt(w,centerX+offset,centerY+offset,'down'); done=true; break; }
+        offset+=2;
+      }
+      if(!done){ // остання надія: ігноруємо суворі сусідні перевірки
+        placeAt(w, centerX+offset, centerY, 'across');
+      }
+    }
+  }
+
+  // межі
+  let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+  for(const k of grid.keys()){
+    const [x,y]=k.split(',').map(Number); if(x<minX)minX=x; if(y<minY)minY=y; if(x>maxX)maxX=x; if(y>maxY)maxY=y;
+  }
+  return {placed,minX,minY,maxX,maxY};
+}
+
+function renderCrossword(container, data){
+  const layout = generateLayout(data);
+  const table = container.querySelector('table.board');
+  const legend = container.querySelector('.legend');
+  table.innerHTML=''; legend.innerHTML='';
+  const rows = layout.maxX-layout.minX+1; // X як колонки
+  const cols = layout.maxY-layout.minY+1; // Y як рядки
+
+  // побудова мапи клітин
+  const cellMap = new Map();
+  for(const w of layout.placed){ for(const c of w.cells){
+    const r = c.y-layout.minY; const k = (c.x-layout.minX)+','+r; cellMap.set(k,{ch:c.ch, words:[]});
+  }}
+  // прив'язки слів до клітин
+  for(const w of layout.placed){ for(const c of w.cells){
+    const k = (c.x-layout.minX)+','+(c.y-layout.minY); if(cellMap.has(k)) cellMap.get(k).words.push(w);
+  }}
+
+  // Створюємо таблицю
+  for(let r=0;r<cols;r++){
+    const tr = document.createElement('tr');
+    for(let c=0;c<rows;c++){
+      const td = document.createElement('td');
+      const info = cellMap.get(c+','+r);
+      if(info){ td.className='cell'; const span = document.createElement('div'); span.className='letter'; span.textContent=''; td.appendChild(span); }
+      else{ td.className='black'; }
+      tr.appendChild(td);
+    }
+    table.appendChild(tr);
+  }
+
+  // Нумерація: ставимо номер на першу клітинку кожного слова
+  const firstCells = new Set();
+  layout.placed.forEach(w=>{ const first = w.cells[0]; const r = first.y-layout.minY; const c = first.x-layout.minX; firstCells.add(c+','+r+':'+w.num); });
+  firstCells.forEach(k=>{ const [cr, num]=k.split(':'); const [c,r]=cr.split(',').map(Number); const td = table.rows[r].cells[c]; const s=document.createElement('div'); s.className='num'; s.textContent=num; td.appendChild(s); });
+
+  // Підказки
+  const cluesA = container.querySelector('.clues');
+  const cluesV = container.querySelector('.clues-v');
+  cluesA.innerHTML = '<div class="clue-title">По горизонталі / По вертикалі</div>';
+  cluesV.innerHTML = '';
+
+  function makeDetails(w, idx){
+    const d=document.createElement('details');
+    const s=document.createElement('summary'); s.textContent = w.num + '. ' + w.clue; d.appendChild(s);
+    const p=document.createElement('p'); p.className='ans'; p.textContent='Відповідь: '+ w.raw.toUpperCase(); d.appendChild(p);
+    d.addEventListener('toggle',()=>{ w.cells.forEach(c=>{ const r=c.y-layout.minY, col=c.x-layout.minX; const td=table.rows[r].cells[col]; const span=td.querySelector('.letter'); if(d.open){ span.textContent=c.ch; td.classList.add('revealed'); } else { span.textContent=''; td.classList.remove('revealed'); } }); });
+    return d;
+  }
+  layout.placed.forEach((w,i)=> cluesA.appendChild(makeDetails(w,i)));
+
+  // Кнопки «Показати всі/Сховати всі»
+  const revealBtn = container.querySelector('[data-action="reveal-all"]');
+  const hideBtn   = container.querySelector('[data-action="hide-all"]');
+  revealBtn?.addEventListener('click',()=>{
+    container.querySelectorAll('details').forEach(d=>{ if(!d.open) d.open=true; });
+  });
+  hideBtn?.addEventListener('click',()=>{
+    container.querySelectorAll('details').forEach(d=>{ if(d.open) d.open=false; });
+  });
+}
+
+renderCrossword(document.getElementById('cw1'), CW1);
+renderCrossword(document.getElementById('cw2'), CW2);
+</script>
 </body>
 </html>
